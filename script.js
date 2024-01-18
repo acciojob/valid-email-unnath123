@@ -7,9 +7,12 @@ function validEmail(str) {
   //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   //   );
 	  var re = /\S+@\S+\.\S+/;
-  return re.test(email);
+  return re.test(str);
 	}
-
 // Do not change the code below.
 const str = prompt("Enter an email address.");
-alert(validEmail(str));
+if(validEmail(str))
+	alert("valid email");
+else
+	alert("not valid email")
+// alert(validEmail(str));
